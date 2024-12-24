@@ -6,7 +6,7 @@ const userAnswer = prompt("Would you like to play?");
 
 let firstAnswer;
 
-const firstQuestion = prompt("What is the name of Santas favroiute reindeer?");
+const firstQuestion = prompt("What is the name of Santas favourite reindeer?");
 
 if (userAnswer.toUpperCase() === "Y") {
   firstQuestion;
@@ -16,16 +16,38 @@ if (userAnswer.toUpperCase() === "Y") {
   );
 }
 let score = 0;
-if ((firstQuestion.toLowerCase = "rudolf")) {
+let questionCount = 0;
+if (firstQuestion.toLowerCase() === "rudolf") {
   score++;
+  questionCount++;
   console.log(
     `${firstQuestion} was the correct answer! You get one point. Your score is now ${score}`
   );
 } else {
+  questionCount++;
   console.log(
     `${firstQuestion} was the incorrect answer! You get 0 points. Your score is now ${score}`
   );
 }
+
+const secondQuestion = prompt("Where does Santa live?");
+
+if (secondQuestion.toLowerCase() === "the north pole") {
+  questionCount++;
+  score++;
+  console.log(
+    `${secondQuestion} was the correct answer! You get one point. Your score is now ${score}`
+  );
+} else {
+  questionCount++;
+  console.log(
+    `${secondQuestion} was the incorrect answer! You get 0 points. Your score is now ${score}`
+  );
+}
+
+console.log(
+  `Thankyou for playing The Ultimate Christmas Quiz. Of a total ${questionCount} questions, you answered ${score} questions correctly`
+);
 
 // * display the question number and question
 // * get the user's answer to the question
